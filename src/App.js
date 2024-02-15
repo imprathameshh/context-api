@@ -1,20 +1,23 @@
 import React, { createContext } from "react";
 import ChildA from "./compoents/ChildA";
 
-export const data = createContext();
-export const data1 = createContext();
+export const nameData = createContext();
+export const genderData = createContext();
 
 function App() {
+  //DEFINE VARIABLE
   const name = "Prathu";
   const gender = "Male";
 
   return (
     <>
-      <data.Provider value={name}>
-        <data1.Provider value={gender}>
+      <h1>Context-Api</h1>
+      <nameData.Provider value={name}>
+        <genderData.Provider value={gender}>
           <ChildA />
-        </data1.Provider>
-      </data.Provider>
+        </genderData.Provider>
+      </nameData.Provider>
+      <p>Note - This is a basic example of context api</p>
     </>
   );
 }

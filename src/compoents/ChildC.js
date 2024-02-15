@@ -1,12 +1,12 @@
 import React from "react";
-import { data, data1 } from "../App";
+import { nameData, genderData } from "../App";
 const ChildC = () => {
   return (
     <>
-      <data.Consumer>
+      <nameData.Consumer>
         {(name) => {
           return (
-            <data1.Consumer>
+            <genderData.Consumer>
               {(gender) => {
                 return (
                   <h2>
@@ -14,10 +14,10 @@ const ChildC = () => {
                   </h2>
                 );
               }}
-            </data1.Consumer>
+            </genderData.Consumer>
           );
         }}
-      </data.Consumer>
+      </nameData.Consumer>
     </>
   );
 };
